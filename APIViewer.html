@@ -1,0 +1,204 @@
+<!DOCTYPE html> 
+<html lang = "en"> 
+<head> 
+	<meta charset = "utf-8">
+	<meta name = "viewport" content = "width = device-width , initial-scale=1"> 
+		<!-- BootStrap --> 
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+
+	 <!-- CSS -->
+	 <link rel = "stylesheet" href = "CSS/sanD.css"> 
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	 <title> Sea Level Rise and Its Impact on San Diego Bay </title> 
+
+
+<style> 
+
+.api-title-wrapper
+{
+	margin-top: 2px;
+	background-color: rgb(90,90,90);
+	padding:1px;
+	
+}
+#APIViewerTitle
+{
+	text-align: center; 
+	font-family: Tahoma, Geneva, sans-serif;
+	background-color:white;
+	color: black;
+	border-radius: 25px;
+	border-style: solid;
+	border-color:#EFEFEF;
+	margin-right: 50px;
+	margin-left:45px;
+	margin-top: 7px;
+}
+
+.api-scrollbox
+{
+	overflow: auto; 
+	height:500px;
+	width: 100%;
+	background-color: rgb(0,0,75);
+	
+}
+
+.first-api-container
+{
+	background-color: rgb(0,0,75); 
+	padding:5px;
+}
+
+#first-api
+{
+	border-radius: 25px;
+	margin-left:15px;
+	padding:15px;
+	border-style:solid;
+	border-color:#EFEFEF;
+}
+
+.second-api-container
+{
+	background-color: rgb(0,0,75); 
+	padding:5px;
+}
+
+#second-api
+{
+	border-radius: 25px;
+	margin-left:15px;
+	padding:15px;
+	border-style:solid;
+	border-color:#EFEFEF;
+}
+
+.third-api-container
+{
+	background-color: rgb(0,0,75); 
+	padding:5px;
+}
+
+#third-api
+{
+	border-radius: 25px;
+	margin-left:15px;
+	padding:15px;
+	border-style:solid;
+	border-color:#EFEFEF;
+}
+
+.fourth-api-container
+{
+	background-color: rgb(0,0,75); 
+	padding:5px;
+}
+
+#fourth-api
+{
+	border-radius: 25px;
+	margin-left:15px;
+	padding:15px;
+	border-style:solid;
+	border-color:#EFEFEF;
+}
+
+
+#disclaimer-info
+{
+	border-style: solid;
+	border-color:#EFEFEF;
+	background-color: white; 
+	color:black;
+	padding: 5px;
+
+}
+
+footer
+{
+	margin-top:15px;
+}
+
+</style> 
+</head> 
+
+<body> 
+	<div class = "container col-lg-12"> 
+		<h1 id = "pageTitle" align= "center"> <b> Sea Level Rise and Its Impact on San Diego Bay </b></h1> 
+	</div> 
+	<div class = "container col-sm-4"> 
+		<div class = "navigation"> 
+			<ul class = "nav-holder"> 
+				<br><li> <a href = "index.html"> Home </a></li></br>
+				
+				<br><li> <a href = "BackgroundPg.html"> Background </a></li></br>
+				
+				<br><li class = "dropdown"> 
+					<a class = "dropdown-open"> Data <span class= "caret"></span></a> 
+					<ul class = "dropdownMenu">
+						<li><a href ="Maps.html"> Maps </a></li>
+						<li><a href = "APIViewer.html"> API Viewer </a></li>
+						<li><a href = "LiDAR.html"> LiDAR </a></li>
+						<li><a href = "Images.html"> Images </a></li>
+					</ul> 
+				</li></br> 
+				
+				<br><li><a href ="Sources.html">  Sources </a></li></br>
+			</ul> 
+
+			<div class = "disclaimer-box"> 
+			<p id = "disclaimer-info"> On the first API that is shown, you may click on the check-boxes to hide the shown layers.</p>
+			<p><center><i> (screen-size dependent feature)</i></center></p>  
+		</div> 
+		</div> 
+
+	</div> 
+
+
+
+	<div class = "container col-sm-8"> 
+		<div class = "api-title-wrapper"> 
+			<h2 id  = "APIViewerTitle"> <b>  API Viewer </b> </h2> 
+		</div> 
+
+		<div class = "api-scrollbox"> 
+
+			<div class = "first-api-container"> 
+				<iframe id = "first-api" width="97%" height="500" frameborder= "1" src="https://paranoidandroidz180.carto.com/builder/d07d5d3c-c736-11e6-b423-0e98b61680bf/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+			</div> 
+
+
+			<div class = "second-api-container"> 
+				<iframe id = "second-api" width="97%" height="500" frameborder="1" src="https://paranoidandroidz180.carto.com/builder/b4a9d988-c87f-11e6-8f2a-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+			</div> 
+
+			<div class = "third-api-container"> 
+				<iframe id = "third-api" width="97%" height="500" frameborder="1" src="https://paranoidandroidz180.carto.com/builder/f1ff4be8-c883-11e6-ba49-0e3ebc282e83/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+			</div>
+
+			<div class = "fourth-api-container"> 
+				<iframe id = "fourth-api" width="97%" height="500" frameborder="1" src="https://paranoidandroidz180.carto.com/builder/396677be-c888-11e6-9211-0e3ebc282e83/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+			</div> 
+
+		</div>
+
+		<footer align = "center"> Website Created By Luis Mejia </footer> 
+	</div> 
+
+
+	</body> 
+</html>
+
+<script> 
+$(document).ready(function(){
+	$('.dropdown-open').click(function(){
+		$('.dropdownMenu').slideToggle(600);
+	});
+});
+
+
+
+</script> 

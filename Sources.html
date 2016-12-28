@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang = "en"> 
+<head> 
+	<meta charset = "utf-8"> 
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1"> 
+	<!-- BootStrap --> 
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+
+	<!-- CSS -->
+	 <link rel = "stylesheet" href = "CSS/sanD.css"> 
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	 <title> Sea Level Rise and Its Impact on San Diego Bay </title>
+
+
+	 <style> 
+	 	.sources-header-container
+	 	{
+	 		background-color:rgb(90,90,90);
+	 		margin-top:2px;
+	 	}
+
+	 	#sources-header
+	 	{
+	 		color: white;
+	 		text-align: center; 
+	 		padding:10px;
+	 		margin-top: 1px;
+	 		margin-bottom: 0px;
+	 	}
+	 	.sources-scroll-box
+	 	{
+	 		overflow: auto; 
+	 		height: 500px; 
+	 		width:100%;
+	 		margin-top:0px;
+	 		background-color:#d9d9d9;
+	 		border-style: solid;
+	 		border-color: rgb(0,0,75);
+	 		border-width: 5px; 
+	 	}
+
+	 	#special-thanks
+	 	{
+	 		margin-left: 4px;
+	 	}
+
+	 	footer
+	 	{
+	 		margin-top: 10px;
+	 	}
+	 </style>  
+</head>
+
+<body>
+	<div class = "container col-lg-12"> 
+		<h1 id = "pageTitle" align= "center"> <b> Sea Level Rise and Its Impact on San Diego Bay </b></h1> 
+	</div> 
+	<div class = "container col-sm-4"> 
+		<div class = "navigation"> 
+			<ul class = "nav-holder"> 
+				<br><li> <a href = "index.html"> Home </a></li></br>
+				
+				<br><li> <a href = "BackgroundPg.html"> Background </a></li></br>
+				
+				<br><li class = "dropdown"> 
+					<a class = "dropdown-open"> Data <span class= "caret"></span></a> 
+					<ul class = "dropdownMenu">
+						<li><a href ="Maps.html"> Maps </a></li>
+						<li><a href = "APIViewer.html"> API Viewer </a></li>
+						<li><a href = "LiDAR.html"> LiDAR </a></li>
+						<li><a href ="Images.html"> Images </a></li>
+					</ul> 
+				</li></br> 
+				
+				<br><li><a href ="Sources.html">  Sources </a></li></br>
+			</ul> 
+		</div> 
+	</div>  
+
+	<div class = "container col-sm-8"> 
+		<div class = "sources-header-container"> 
+			<h2 id = "sources-header"> Sources </h2> 
+		</div> 
+
+		<div class = "sources-scroll-box"> 
+			<div class = "sources-information-container"> 
+					<ol> 
+						<li>ICLEI-Local Governments for Sustainability USA. January 2012. Sea Level Rise Adaptation Strategy for San Diego. Retrieved October 6, 2016.http://icleiusa.org/wp-content/uploads/2016/08/San_Diego_Bay_SLR_Adaptation_Strategy_Complete.pdf</li>
+
+						<br> </br>
+
+						<li>Data | OpenTopography. (n.d.). Retrieved November 2, 2016, from http://opentopo.sdsc.edu/lidarDataset?opentopoID=OTLAS.092011.2875.1</li>
+
+						<br> </br>
+
+						<li>NOAA Sea Level Rise (1-6 ft) Data for San Diego Bay NWR. (1970). Retrieved November 09, 2016, from https://www.sciencebase.gov/catalog/item/57b3a3dce4b03bcb010397c1 </li>
+
+						<br> </br>
+
+						<li>U.S. Geological Survey. (n.d.). Retrieved October 19, 2016, from https://www.usgs.gov/ </li> 
+
+						<br> </br>
+
+						<li>Welcome to the San Diego Geographic Information Source. (n.d.). Retrieved December 7, 2016, from http://www.sangis.org/ </li>
+
+						 <br> </br>
+					</ol>
+
+					<p id = "special-thanks">
+						<b> 
+						We would like to thank all dataset distributors such as OpenTopography, NOAA, USGS, Carto, and all other dataset distributors who allow public use of their data. Thanks to them we are all able to analyze data and create graphical representations of causes that are meaningful to us.
+						</b>
+					</p>
+			
+			</div> 
+		</div> 
+	</div> 
+
+	<div class = "container col-sm-12"> 
+		<footer align = "center"> Website Created By Luis Mejia </footer> 
+	</div> 
+
+
+
+</body>
+
+</html> 
+<script> 
+$(document).ready(function(){
+	$('.dropdown-open').click(function(){
+		$('.dropdownMenu').slideToggle(600);
+	});
+});
+
+
+
+</script> 

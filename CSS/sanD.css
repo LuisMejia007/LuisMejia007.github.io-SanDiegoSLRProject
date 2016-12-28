@@ -1,0 +1,78 @@
+/*New CSS*/
+
+body
+{
+	background-color: WhiteFrost;
+
+}
+	 #pageTitle
+	 {
+	 	font-family: Tahoma, Geneva, sans-serif;
+	 	
+	 	background-color: white;
+	 	padding:2%;
+	 	padding-right: 10%; 
+	 	padding-left: 10%;
+	 	margin-top: 0px;
+	 	margin-right: 0px; 
+	 	margin-left: 0px; 
+	 }
+	 .navigation
+	 {
+	 	background-color: rgb(0,0,75);
+	 	margin-right: 1%;
+	 	margin-top: 0px;
+	 	margin-left: 0px;
+	 	padding: 5% 7% 10% 7%;
+	 	border-radius: 10px;
+
+	 }
+
+	 .navigation li
+	 {
+	 	list-style-type: none; 
+	 	text-decoration: none;
+	 	font-family: Tahoma, Geneva, sans-serif;
+	 	color: white;
+	 	font-size: 17px;
+	 	cursor: pointer;
+	 	text-align: center;
+	 }
+
+	
+
+	 .nav-holder
+	 {
+	 	background-color:white;
+	 	padding: 0px;
+	 	margin:30px;
+	 	border-radius: 10px;
+	 }
+
+	
+	 .dropdownMenu
+	 {
+	 	display: none;
+	 }
+
+	 .dropdownMenu
+	 {
+	 	background-color: white;
+	 	margin-right: 10%;
+	 	margin-top: 2%;
+	 	border-radius: 3%;
+	 }
+
+	
+	 #pageInfo
+	 {
+	 	position: relative;
+	 }
+
+
+	a:hover
+	{
+		border-radius: 7%;
+		font-weight: bold;
+	
+	}

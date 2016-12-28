@@ -1,0 +1,316 @@
+<!DOCTYPE html> 
+<html lang = "en"> 
+<head> 
+	<meta charset = "utf-8">
+	<meta name = "viewport" content = "width = device-width , initial-scale=1"> 
+		<!-- BootStrap --> 
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+
+	 <!-- CSS -->
+	 <link rel = "stylesheet" href = "CSS/sanD.css"> 
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	 <title> Sea Level Rise and Its Impact on San Diego Bay </title> 
+
+</head> 
+
+<style> 
+
+#liDAR-title
+{
+	background-color: rgb(90,90,90); 
+	color: white; 
+	padding: 10px;
+	margin-top: 2px;
+	border-radius:25px;
+}
+.giant-lidar-container
+{
+	background-color:rgb(90,90,90);
+	border-radius:25px;
+	padding-bottom:10px;
+	border-style: solid;
+	border-color:#bfbfbf;
+	border-width:4px;
+}
+.liDAR-scroll-box
+{
+	overflow:auto;
+	width: 100%;
+	height: 570px;
+	background-color: white;
+	margin-top:-10px;
+	border-style: solid;
+	border-color:rgb(0,0,75);
+	border-width:10px;
+	border-radius: 25px;
+
+
+}
+.video-and-info-container1
+{
+	background-color:gray;
+	border-radius: 25px; 
+	margin:3px;
+	padding: 10px;
+}
+
+.video-container-1
+{
+	background-color:black;
+	border-radius:25px;
+	padding:3px;
+	margin: 5px;
+}
+
+#video1
+{
+	margin-left:5%;
+}
+
+#infobtn1
+{
+	padding: 10px;
+	margin-left:45%;
+	border-radius:5% 50% 1% 50%;
+	border-style:solid;
+	border-color:white;
+	border-width:5px;
+
+
+}
+
+
+#liDAR-video1-info
+{
+	margin-top:4px;
+	display: none; 
+	background-color: #004d99;
+	border-radius:25px;
+	color: white;
+	border-style:solid;
+	border-color:white;
+	border-width:5px;
+	padding:8px;
+}
+
+
+.video-and-info-container2
+{
+	background-color:gray;
+	border-radius: 25px; 
+	margin:3px;
+	padding: 10px;
+}
+
+.video-container-2
+{
+	background-color:black;
+	border-radius:25px;
+	padding:3px;
+	margin: 5px;
+}
+
+#video2
+{
+	margin-left:5%;
+}
+
+
+#infobtn2
+{
+	padding: 10px;
+	margin-left:45%;
+	border-radius:5% 50% 1% 50%;
+	border-style:solid;
+	border-color:white;
+	border-width:5px;
+
+
+
+}
+
+#liDAR-video2-info
+{
+	margin-top:4px;
+	display: none; 
+	background-color: #004d99;
+	border-radius:25px;
+	color: white;
+	border-style:solid;
+	border-color:white;
+	border-width:5px;
+	padding:8px;
+}
+
+
+.video-and-info-container3
+{
+	background-color:gray;
+	border-radius: 25px; 
+	margin:3px;
+	padding: 10px;
+}
+.video-container-3
+{
+	background-color:black;
+	border-radius:25px;
+	padding:3px;
+	margin: 5px;
+}
+
+#video3
+{
+	margin-left:5%;
+}
+
+
+#infobtn3
+{
+	padding: 10px;
+	margin-left:45%;
+	border-radius:5% 50% 1% 50%;
+	border-style:solid;
+	border-color:white;
+	border-width:5px;
+}
+
+#liDAR-video3-info
+{
+	margin-top:4px;
+	display: none; 
+	background-color: #004d99;
+	border-radius:25px;
+	color: white;
+	border-style:solid;
+	border-color:white;
+	border-width:5px;
+	padding:8px;
+}
+
+
+
+
+
+footer
+{
+	color: white;
+	font-size: 12px;
+	text-align: center;
+}
+
+</style>
+
+<body> 
+
+	<div class = "container col-lg-12"> 
+		<h1 id = "pageTitle" align= "center"> <b> Sea Level Rise and Its Impact on San Diego Bay </b></h1> 
+	</div> 
+	<div class = "container col-sm-4"> 
+		<div class = "navigation"> 
+			<ul class = "nav-holder"> 
+				<br><li> <a href = "index.html"> Home </a></li></br>
+				
+				<br><li> <a href = "BackgroundPg.html"> Background </a></li></br>
+				
+				<br><li class = "dropdown"> 
+					<a class = "dropdown-open"> Data <span class= "caret"></span></a> 
+					<ul class = "dropdownMenu">
+						<li><a href ="Maps.html"> Maps </a></li>
+						<li><a href = "APIViewer.html"> API Viewer </a></li>
+						<li><a href = "LiDAR.html"> LiDAR </a></li>
+						<li><a href = "Images.html"> Images </a></li>
+					</ul> 
+				</li></br> 
+				
+				<br><li><a href ="Sources.html">  Sources </a></li></br>
+			</ul> 
+		</div> 
+	</div> 
+
+
+	<div class = "container col-sm-8"> 
+		<div class = "giant-lidar-container"> 
+			<h2 id = "liDAR-title" align = "center"> LiDAR Viewer </h2>
+
+			<div class = "liDAR-scroll-box"> 
+
+				<img src = "Images/missionBayLiDar1.jpg" width = "100%" height = "400"> 
+
+					<div class = "video-and-info-container1"> 
+						<div class = "video-container-1"> 
+							<video id = "video1" width = "90%" height = "500px" controls> 
+							<source src = "Videos/sagaFirst_converted.mp4" type = "video/mp4">
+						</div> 
+						<button id = "infobtn1" class = "btn btn-primary"> Info </button> 
+
+							<p id = "liDAR-video1-info"> I wanted to give a 3-Dimensional point of view of the particular areas in Mission Bay that will be highly vulnerable to coastal flooding, I knew this could be done by showcasing LiDAR Point Cloud data. I also wanted to give an immersive experience, so I recorded my screen when working with the LiDAR Point Cloud Viewer. This video showcases the residential areas and docks around Mission Bay. I was able to showcase this LiDAR data thanks to the SAGA software and of course the datasets provided by OpenTopography.  </p> 
+
+					</div> 
+
+
+					<div class = "video-and-info-container2"> 
+						<div class = "video-container-2"> 
+							<video id = "video2" width = "90%" height = "500px" controls> 
+								<source src = "Videos/missionBayPark.mp4" type = "video/mp4"> 
+						</div>
+						<button id  = "infobtn2" class = "btn btn-primary"> Info </button> 
+
+						<p id = "liDAR-video2-info"> Vacation Isles is a man-made island in Mission Bay San Diego, and as stated earlier it will be submerged by the year 2100 (6 feet sea level rise). Vacation Isles is the home to many public amenities (parks, picnic areas, etc) and also hotels. Bridges connecting to Vacation Isles (Ingraham St) will also be affected. Maps can't visually showcase these vulnerable sectors, so I wanted to showcase this with the LiDAR Point Cloud Viewer. In the video you will be able to see the Model Yacht Pond, Barefoot Bar & Grill, and other recreational sites. </p> 
+
+					</div>
+
+
+					<div class = "video-and-info-container3">
+						<div class = "video-container-3"> 
+							<video id = "video3" width = "90%" height = "500px" controls> 
+							<source src = "Videos/sanDiegoWildlifeRefuge.mp4" type = "video/mp4">
+						</div> 
+						<button id = "infobtn3" class = "btn btn-primary"> Info </button>
+
+
+						<p id = "liDAR-video3-info"> 
+							As shown earlier, Coronado is one of the most vulnerable locations in San Diego to coastal flooding. The San Diego National Wildlife Refuge Complex is also in this area, and as previously stated the habitats within the refuge will be extremely vulnerable to coastal flooding. The San Diego National Wildlife Refuge Complex is the home to native species and their respective habitats. One of the most important ecosystems in the San Diego National Wildlife Refuge Complex are eelgrass beds, which are extremely important for the surrounding waterfowl species and even local economies, such as fisheries. In this video you will be able to see the surrounding wetlands consisting of eelgrass beds. You will also be able to see commerce centers that surround the area. As stated earlier this whole site will unfortunately be submerged by the year 2100. 
+
+						</p> 
+
+
+					</div>
+			</div>
+			<footer> Website Created By Luis Mejia </footer> 
+		</div>
+	</div> 
+
+
+
+
+</body> 
+
+</html> 
+<script> 
+$(document).ready(function(){
+	$('.dropdown-open').click(function(){
+		$('.dropdownMenu').slideToggle(600);
+	});
+});
+
+$(document).ready(function(){
+	$('#infobtn1').click(function(){
+		$('#liDAR-video1-info').slideToggle(500);
+	});
+});
+
+$(document).ready(function(){
+	$('#infobtn2').click(function(){
+		$('#liDAR-video2-info').slideToggle(500);
+	});
+});
+
+$(document).ready(function(){
+	$('#infobtn3').click(function(){
+		$('#liDAR-video3-info').slideToggle(500);
+	});
+});
+
+</script>
